@@ -15,21 +15,26 @@ b=datetime.timedelta(10)
 
 #print(a+b)
 
-c=pd.date_range(a,periods=10,freq = "Y")
+data =np.array([1,2,3,4,5,6,7,8,9,10])
+
+c=pd.date_range(a,periods=10,freq = "12M")
 #print(c)
 
-d=pd.DataFrame(np.zeros((10,1)),index=c, columns=list("A"))
+d=pd.DataFrame(data,index=c, columns=list("A"))
 
 #print(d)
 
 Prices = pd.DataFrame()
 
-print(Prices)
+#print(Prices)
 
 Prices=d
 
-print(Prices)
+#print(Prices)
 
-data=np.array(0)
+#print(data)
 
-print(data)
+mean=Prices["2001-01-31":"2003-01-31"].mean(axis=0)
+
+print(mean)
+
